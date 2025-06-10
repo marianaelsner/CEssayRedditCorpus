@@ -7,7 +7,7 @@ Combine_from  = "DONE_step4"
 # Directory for the output file
 output_directory = r"C:\Users\Mariana\Documents\Python\results"
 os.makedirs(output_directory, exist_ok=True)
-outputfilename = os.path.join(output_directory, "CompleteDATA_step4_recombined.csv")
+outputfilename = os.path.join(output_directory, "CompleteDATA_recombined.csv")
 
 import os
 import pandas as pd
