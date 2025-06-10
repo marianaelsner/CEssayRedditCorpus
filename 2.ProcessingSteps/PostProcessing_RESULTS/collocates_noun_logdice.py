@@ -183,29 +183,3 @@ output_path = r"C:\Users\Mariana\Documents\Python\results\Woke_NOUN_Collocates_W
 logdice_df.to_excel(output_path, index=False)
 print(f"✅ Saved collocates within a window of 5 words to: {output_path}")
 
-# Print summary
-print("\nTop 20 Collocates (window of 5 words before and after 'woke'): Combined 'mean' and 'meant'")
-print(logdice_df.to_string(index=False))
-
-# ================================
-# 🎨 OPTIONAL: Generate WordCloud
-# ================================
-# Limit WordCloud to top 20 collocates
-top20_collocates = dict(top20)
-
-if not top20_collocates:
-    print("⚠️ No collocates found for 'woke' as a noun. Skipping WordCloud generation.")
-else:
-    # Generate WordCloud
-    wc = WordCloud(
-        width=1200,
-        height=600,
-        background_color="white",
-        max_words=20
-    ).generate_from_frequencies(top20_collocates)
-
-    # Plot WordCloud
-    plt.figure(figsize=(12, 6))
-    plt.imshow(wc, interpolation="bilinear")
-    plt.axis("off")
-    plt.show()
