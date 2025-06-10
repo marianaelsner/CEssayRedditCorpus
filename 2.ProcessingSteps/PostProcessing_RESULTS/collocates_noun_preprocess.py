@@ -18,7 +18,7 @@ punctuation_set = set(string.punctuation)
 tqdm.pandas()
 
 # File paths
-input_path = r"C:\Users\Mariana\Documents\Python\csv\Data_9_Reassigned.csv"
+input_path = r"C:\Users\Mariana\Documents\Python\results\CompleteDATA_recombined.csv"
 preprocessed_output_path = "preprocessed_data_noun.pkl"
 
 # Function to safely parse pos_word_tuples
