@@ -30,7 +30,7 @@ df["filtered_pos_word_tuples"] = df["pos_word_tuples"].progress_apply(filter_non
 woke_adj_count = df["filtered_pos_word_tuples"].progress_apply(lambda pos_list: sum(1 for word, tag in pos_list if word == 'woke' and tag == 'ADJ')).sum()
 
 # Hardcoded total token count (for scaling purposes)
-total_token_count = 191402374  # Predefined total token count
+total_token_count = df["filtered_pos_word_tuples"].progress_apply(len).sum()
 
 # Calculate relative frequency
 relative_frequency = woke_adj_count / total_token_count if total_token_count > 0 else 0
