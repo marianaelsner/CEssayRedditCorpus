@@ -10,13 +10,13 @@ import json
 
 
 # Directory containing the CSV files
-directory = r'C:\Users\Mariana\Documents\Python\steps\word_embedding\TODOcsvs'
+directory = r'C:\Users\Mariana\Documents\Python\steps\TODOcsvs'
 
 
 # Change theese for each step
 Filein  = "DONE_step0"
 Fileout = "DONE_step1"
-WeAreInFolder = r"C:\Users\Mariana\Documents\Python\steps\word_embedding\step1"
+WeAreInFolder = r"C:\Users\Mariana\Documents\Python\steps\step1"
 
 # Update the process_csv_file function to handle a list of files
 def process_csv_files(thread_id:int, csv_files)->None:
