@@ -1,4 +1,4 @@
-folder = r'C:\Users\Mariana\Documents\Python\steps\word_embedding\TODOcsvs'
+folder = r'C:\Users\Mariana\Documents\Python\steps\TODOcsvs'
 
 import os
 import numpy as np
@@ -7,7 +7,7 @@ import pickle
 StepINfileNAME = "step0".lower() # What is the name of the that we will take as input
 StepFileout = "step1".lower() # What is the name of the step when it is "Done" that we want to eliminate from run
 ThreadCount = 30
-WeAreInFolder = r"C:\Users\Mariana\Documents\Python\steps\word_embedding\step1"
+WeAreInFolder = r"C:\Users\Mariana\Documents\Python\steps\step1"
 
 #################### CHANGE ABOVE ########################### 
 files = [f for f in os.listdir(folder)]
