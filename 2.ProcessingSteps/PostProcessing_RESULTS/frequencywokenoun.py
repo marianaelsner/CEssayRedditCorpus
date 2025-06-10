@@ -27,8 +27,7 @@ woke_noun_count = df["filtered_pos_word_tuples"].apply(
     lambda pos_list: sum(1 for word, tag in pos_list if (word == 'woke' and tag == 'NOUN') or (word == 'wokes' and tag == 'NOUN'))
 ).sum()
 
-# Hardcoded total token count
-total_token_count = 191402374
+total_token_count = df["filtered_pos_word_tuples"].progress_apply(len).sum()
 
 # Calculate relative frequency
 relative_frequency = woke_noun_count / total_token_count if total_token_count > 0 else 0
